@@ -24,13 +24,21 @@ Para el proyecto base se han añadido paquetes al module bundles Parcel que nos 
 
 Se ha añadido: 
  - npm install --save-dev rimraf npm-run-all
- - 
-3. Soporte a navegadores antiguos.
+
+
+En el enunciado se indica que el formato de las url tiene que ser /det1 /det2 indicando que se espera el uso del sistema "Directory-based Routing" o "Clean URLs" por eso hemos definido una estructura de carpetas para organizar los accesos y dentro de cada carpeta su index.html.
+
+
+1. Soporte a navegadores antiguos.
 Se ha aprovechado el proceso de configuración inicial para añadir el campo "browserlist" al package.json con la configuración que se pide en el enunciado. Para ello hemos usado la configuración "last 10 years" y además hemos añadido "not dead" para excluir aquellos que no tienen soporte oficial o uso real actual. Hemos visto que esto ayuda a mantener un tamaño reducido de los archivos.
 Hemos aprendido que podemos usar npx browserlist para ver una lista completa de los navegadores en función de nuestra configuración y que es importante saber que Parcel va a aumentar bastante el tamaño de la build final para dar soporte a esos navegadores de hasta 10 años de antiguedad.
 
-4. Utilización de pre/postprocesadores.
-5. Dependencia externa.
-6. Semántica y accesibilidad.
-7. Creación y publicación a Git y Github.
-8. Publicación a internet
+1. Utilización de pre/postprocesadores.
+A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del mismo en este apartado. Para que parcel empiece a usar postCSS creamos el fichero .postcssrc en la raiz del proyecto. 
+1. Dependencia externa.
+2. Semántica y accesibilidad.
+3. Creación y publicación a Git y Github.
+La creación del proyecto se ha hecho primero en local usando Parcel. Como parcel ya añade un .git en el proyecto generado hemos podido publicarlo en github siguiendo la documentación y que se puede encontrar en el siguiente enlace: https://github.com/alexcordonvila/herramientas-html-pec
+
+1. Publicación a internet
+Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
