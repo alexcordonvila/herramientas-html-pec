@@ -3,11 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
+  "browserslist": [
+    "> 0.2%",
+    "last 10 years",
+    "not dead"
+  ],
   "scripts": {
-    "start": "npm-run-all clean parcel:dev", 
+    "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel", 
-    "parcel:build": "parcel build", 
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
     "clean": "rimraf dist .parcel-cache"
   },
   "devDependencies": {

@@ -18,7 +18,17 @@ Cuando hemos instalado parcel hemos modificado el package.json para poder config
 ```
 npm start activa el modo desarrollo, nos lanza el servidor local y la recarga en vivo. No se lanza ningún optimizador ni minificador para poder depurar el codigo.
 
+npm run build nos activa el modo producción. Parcel aquí genera la carpeta /dist y si que modifica el código, lo minifica, optimiza imágenes, añade hashes a los archivos para la caché de navegador...
+
+Para el proyecto base se han añadido paquetes al module bundles Parcel que nos mejoran la manera en que trabajamos. 
+
+Se ha añadido: 
+ - npm install --save-dev rimraf npm-run-all
+ - 
 3. Soporte a navegadores antiguos.
+Se ha aprovechado el proceso de configuración inicial para añadir el campo "browserlist" al package.json con la configuración que se pide en el enunciado. Para ello hemos usado la configuración "last 10 years" y además hemos añadido "not dead" para excluir aquellos que no tienen soporte oficial o uso real actual. Hemos visto que esto ayuda a mantener un tamaño reducido de los archivos.
+Hemos aprendido que podemos usar npx browserlist para ver una lista completa de los navegadores en función de nuestra configuración y que es importante saber que Parcel va a aumentar bastante el tamaño de la build final para dar soporte a esos navegadores de hasta 10 años de antiguedad.
+
 4. Utilización de pre/postprocesadores.
 5. Dependencia externa.
 6. Semántica y accesibilidad.
