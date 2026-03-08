@@ -26,7 +26,7 @@ Se ha añadido:
  - npm install --save-dev rimraf npm-run-all
 
 
-En el enunciado se indica que el formato de las url tiene que ser /det1 /det2 indicando que se espera el uso del sistema "Directory-based Routing" o "Clean URLs" por eso hemos definido una estructura de carpetas para organizar los accesos y dentro de cada carpeta su index.html.
+En el enunciado se indica que el formato de las url tiene que ser /categoria /det1 /det2 indicando que se espera el uso del sistema "Directory-based Routing" o "Clean URLs" por eso hemos definido una estructura de carpetas para organizar los accesos y dentro de cada carpeta su index.html.
 
 
 1. Soporte a navegadores antiguos.
@@ -35,10 +35,15 @@ Hemos aprendido que podemos usar npx browserlist para ver una lista completa de 
 
 1. Utilización de pre/postprocesadores.
 A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del mismo en este apartado. Para que parcel empiece a usar postCSS creamos el fichero .postcssrc en la raiz del proyecto. 
+Como preprocesador extra hemos decidido usar SASS porque hasta este momento no lo he usado nunca y me parece un buen momento para usarlo. Nos permite escribir los estilos de manera más organizada, mayor reusabilidad, variables... 
+
 1. Dependencia externa.
+Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. El paquete swiper para crear un carousel de imagenes en la home o el paquete starabily.css para ayudarnos a mostrar un sistema de estrellas para las valoraciones.
+
 2. Semántica y accesibilidad.
 3. Creación y publicación a Git y Github.
 La creación del proyecto se ha hecho primero en local usando Parcel. Como parcel ya añade un .git en el proyecto generado hemos podido publicarlo en github siguiendo la documentación y que se puede encontrar en el siguiente enlace: https://github.com/alexcordonvila/herramientas-html-pec
 
 1. Publicación a internet
 Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
+Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que si deployamos en la rama master enseguida nos quedamos sin tokens. Se ha decidido crear una rama para hacer previews ya que netrlify no descuenta tokens en deploys de ramas. Una vez tengamos versiones definitivas las iremos pasando a master gastando esos tokens.
