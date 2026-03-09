@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 //Variables de colores
-$rojo-bilbao: #b01212;
+$rojo-bilbao: rgb(176, 18, 18);
 $color-verde-euskadi: rgba(0, 155, 72);
 $blanco: #ffffff;
 $color-beige: rgb(242, 242, 230);
@@ -110,6 +110,83 @@ main {
 }
 /*_Navbar*/
 
+/*index.html_*/
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(34, 3, 3, 0.639)),
+    url("./img/hero-image.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: $font-size-h1;
+    margin: 0;
+    text-transform: uppercase;
+    span {
+        color: $rojo-bilbao;
+      }
+  }
+  .hero-subtitle {
+    font-size: $font-size-large;
+  }
+  .hero-credits {
+    font-size: $font-size-small;
+    opacity: 0.7;
+    margin-top: auto;
+    align-self: flex-end;
+    background-color: $color-beige-modificado;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+
+  a {
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    background: $rojo-bilbao;
+    color: $blanco;
+
+    &:hover {
+      background: $rojo-bilbao;
+      opacity: 60%;
+    }
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: $blanco;
+    border: 1px solid white;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+/*_index.html*/
+
 /*Footer_*/
 footer {
   background-color: $negro-light;
@@ -127,23 +204,18 @@ footer {
 
     &:hover {
       text-decoration: underline;
-      color: $color-verde-euskadi
+      color: $color-verde-euskadi;
     }
-  }
-  .footer-links {
-    text-decoration: none;
-    list-style: none;
-    flex-direction: column;
   }
 }
 
 /*_Footer*/
 
 /*==================== Media Queries per ser responsive ===============*/
-/* Mobiles (hasta a 767px) */
+/* Mobiles/tablets (hasta a 767px) */
 @media (max-width: 767px) {
   /*Para la navbar en mobiles centramos el contenido usando flexbox column*/
-  .main-header .header-container {
+  .navbar-principal .navbar-container {
     flex-direction: column;
     gap: 1rem;
   }
@@ -151,32 +223,37 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    flex: 1;
   }
+  .hero-actions {
+    flex-direction: column;
+    width: 50%;
+    a {
+      text-align: center;
+    }
+  }
+  /*index.html_*/
+  .hero {
+    min-height: 70vh;
+    padding: 1rem;
 
-  .footer-links .legal-links {
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-}
-/* Tablets (entre 768px i 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  /*Para la navbar en tabletas centramos el contenido usando flexbox column*/
-  .main-header .header-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-   footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-  }
+    .hero-content {
+      .hero-title {
+        font-size: $font-size-h2;
+      }
 
-  .footer-links .legal-links {
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-}
+      .hero-subtitle {
+        font-size: $font-size-base;
+        padding: 0 10px;
+      }
+    }
 
-/* Escritorio (a partir de 992px) */
-@media (min-width: 992px) {
+    .hero-credits {
+      align-self: center;
+      text-align: center;
+      font-size: 0.6rem;
+      margin-top: 1rem;
+    }
+  }
+  /*_index.html*/
 }
