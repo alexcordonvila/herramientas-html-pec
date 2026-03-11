@@ -5,7 +5,7 @@
 $rojo-bilbao: rgb(176, 18, 18);
 $color-verde-euskadi: rgba(0, 155, 72);
 $blanco: #ffffff;
-$color-beige: rgb(242, 242, 230);
+$color-beige: rgb(241, 241, 203);
 $color-blanco-fondo: #f0f2f5;
 $negro-light: #1c1c1c;
 
@@ -189,22 +189,31 @@ main {
 /*_index.html*/
 
 /*categoria.html_*/
-.titulo-categoria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.categoria-page {
+  padding: 4rem 2rem;
+
+  h1 {
+    font-size: $font-size-h2;
+    color: $rojo-bilbao;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 }
-.categoria_content {
+
+.categoria-content {
   display: flex;
   flex-direction: column;
 }
 .grid {
   align-items: center;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
   font-family: $font-main;
 }
 
@@ -271,6 +280,67 @@ main {
 }
 
 /*_categoria.html*/
+
+/*links.html_*/
+.links-page {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: $font-size-h2;
+    color: $rojo-bilbao;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .links-section {
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: $font-size-xlarge;
+      border-bottom: 2px solid $color-verde-euskadi;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .links-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid $color-beige;
+      font-size: $font-size-small;
+
+      strong {
+        color: $negro-light;
+      }
+
+      a {
+        color: $rojo-bilbao;
+        text-decoration: none;
+        word-break: break-all;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .info-box {
+    background-color: $color-beige;
+    padding: 1.5rem;
+    border-radius: 4px;
+    font-size: $font-size-small;
+    line-height: 1.6;
+  }
+}
+/*_links.html*/
 
 /*Footer_*/
 footer {
@@ -341,4 +411,32 @@ footer {
     }
   }
   /*_index.html*/
+
+  /*links.html_*/
+  .links-page {
+    padding: 4rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+      font-size: $font-size-h2;
+      color: $rojo-bilbao;
+      text-align: center;
+    }
+  }
+  .link-list li {
+    font-size: $font-size-xsmall;
+
+    a {
+      display: block;
+      margin-top: 2px;
+    }
+  }
+  .info-box {
+    padding: 1rem;
+    font-size: $font-size-xsmall;
+  }
+
+  /*_links.html*/
 }
