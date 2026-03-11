@@ -138,8 +138,8 @@ main {
     margin: 0;
     text-transform: uppercase;
     span {
-        color: $rojo-bilbao;
-      }
+      color: $rojo-bilbao;
+    }
   }
   .hero-subtitle {
     font-size: $font-size-large;
@@ -190,15 +190,21 @@ main {
 
 /*categoria.html_*/
 .titulo-categoria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categoria_content {
+  display: flex;
+  flex-direction: column;
 }
 .grid {
+  align-items: center;
+
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 2rem $padding-right 2rem 2rem; 
+  padding: 2rem 2rem 2rem 2rem;
   font-family: $font-main;
 }
 
@@ -211,7 +217,9 @@ main {
 
   .image-container {
     height: 220px;
+
     img {
+      border-radius: 8px 8px 0 0;
       width: 100%;
       height: 100%;
     }
@@ -229,10 +237,10 @@ main {
     }
 
     h2 {
-      font-size: $font-size-xlarge; 
+      font-size: $font-size-xlarge;
       font-weight: 700;
-      em { 
-        color: $color-verde-euskadi; 
+      em {
+        color: $color-verde-euskadi;
       }
     }
 
