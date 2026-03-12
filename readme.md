@@ -34,24 +34,24 @@ Para que parcel detecte correctamente todos los "entry points" hemos modificado 
   "parcel:build": "parcel build src/*.html src/**/*.html --public-url ./",
 ```
 
-1. Soporte a navegadores antiguos.
+3. Soporte a navegadores antiguos.
 Se ha aprovechado el proceso de configuración inicial para añadir el campo "browserlist" al package.json con la configuración que se pide en el enunciado. Para ello hemos usado la configuración "last 10 years" y además hemos añadido "not dead" para excluir aquellos que no tienen soporte oficial o uso real actual. Hemos visto que esto ayuda a mantener un tamaño reducido de los archivos.
 Hemos aprendido que podemos usar npx browserlist para ver una lista completa de los navegadores en función de nuestra configuración y que es importante saber que Parcel va a aumentar bastante el tamaño de la build final para dar soporte a esos navegadores de hasta 10 años de antiguedad.
 
-1. Utilización de pre/postprocesadores.
+4. Utilización de pre/postprocesadores.
 A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del mismo en este apartado. Para que parcel empiece a usar postCSS creamos el fichero .postcssrc en la raiz del proyecto. Hemos usado autoprefixer (añade prefijos de navegadores para poder soportar css moderno en todos los navegadores) y css nano ``npm install cssnano``  (minimizador de css) para experimentar en el uso de post-procesamiento 
 Como preprocesador extra hemos decidido usar SASS porque hasta este momento no lo he usado nunca y me parece un buen momento para usarlo aunque no aproveche todas sus funcionalidades. Nos permite escribir los estilos de manera más organizada, mayor reusabilidad, variables... 
 
-1. Dependencia externa.
-Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. El paquete swiper para crear un carousel de imagenes en la home o el paquete starabily.css para ayudarnos a mostrar un sistema de estrellas para las valoraciones.
+5. Dependencia externa.
+Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. Se ha configurado siguiendo la documentación ```https://leafletjs.com/examples/quick-start/```.
 
-2. Semántica y accesibilidad.
+1. Semántica y accesibilidad.
 
 
 
-3. Creación y publicación a Git y Github.
+7. Creación y publicación a Git y Github.
 La creación del proyecto se ha hecho primero en local usando Parcel. Como parcel ya añade un .git en el proyecto generado hemos podido publicarlo en github siguiendo la documentación y que se puede encontrar en el siguiente enlace: https://github.com/alexcordonvila/herramientas-html-pec
 
-1. Publicación a internet
+8. Publicación a internet
 Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
 Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que si deployamos en la rama master enseguida nos quedamos sin tokens. Se ha decidido crear una rama para hacer previews ya que netrlify no descuenta tokens en deploys de ramas. Una vez tengamos versiones definitivas las iremos pasando a master gastando esos tokens.
