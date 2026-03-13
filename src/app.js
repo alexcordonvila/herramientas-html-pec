@@ -1,6 +1,7 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+
 const map = L.map('map').setView([43.2592, -2.9234], 15); //Coordenadas de Bilbao
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

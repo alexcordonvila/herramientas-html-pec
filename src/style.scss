@@ -348,15 +348,29 @@ main {
 }
 /*_links.html*/
 /*detalle_*/
+.detalle-page {
+  .splide__slide {
+    margin-top: 1.2rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      aspect-ratio: 1/1;
+    }
+  }
+  h2 {
+    margin-top: 1.5rem;
+  }
+}
 .detalle-page figure iframe {
-  margin: 3rem 0;
+  margin: 1.5rem 0 0 0;
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 .detalle-image-container {
   width: 100%;

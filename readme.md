@@ -43,7 +43,7 @@ A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del 
 Como preprocesador extra hemos decidido usar SASS porque hasta este momento no lo he usado nunca y me parece un buen momento para usarlo aunque no aproveche todas sus funcionalidades. Nos permite escribir los estilos de manera más organizada, mayor reusabilidad, variables... 
 
 5. Dependencia externa.
-Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. Se ha configurado siguiendo la documentación ```https://leafletjs.com/examples/quick-start/```.
+Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. Se ha configurado siguiendo la documentación ```https://leafletjs.com/examples/quick-start/```. Para las 3 imagenes dentro de detalle hemos usado el paquete npm de SplideJS ```https://splidejs.com/```.
 
 1. Semántica y accesibilidad.
 
