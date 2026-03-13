@@ -46,8 +46,8 @@ Como preprocesador extra hemos decidido usar SASS porque hasta este momento no l
 Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. Se ha configurado siguiendo la documentación ```https://leafletjs.com/examples/quick-start/```. Para las 3 imagenes dentro de detalle hemos usado el paquete npm de SplideJS ```https://splidejs.com/```.
 
 1. Semántica y accesibilidad.
-
-
+Para validar la semántica hemos usado el Nu Html checker, siempre pasandole el html de la build para producción.
+Hemos añadido aria-labels en los puntos necesarios como en botones de "ver detalles" en la página de categoria, en los buttons de la home o la navbar.
 
 7. Creación y publicación a Git y Github.
 La creación del proyecto se ha hecho primero en local usando Parcel. Como parcel ya añade un .git en el proyecto generado hemos podido publicarlo en github siguiendo la documentación y que se puede encontrar en el siguiente enlace: https://github.com/alexcordonvila/herramientas-html-pec
