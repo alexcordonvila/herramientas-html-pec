@@ -1,20 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categoría - Bilbaofoodies</title>
   <link rel="icon" href="../img/cutlery.png" type="image/png">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/src/style.scss">
+  <style>
+    #map {
+      height: 300px;
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body>
-
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
   <include src="components/header.html"></include>
+  <main class="categoria-page">
+    <header class="titulo-categoria">
+      <h1>Nuestra ruta de pintxos por Bilbao</h1>
+      <p class="intro-text">Una selección única para una experiencia cinco estrellas!</p>
+    </header>
+    <section class="categoria-content">
+      <h2 class="visually-hidden">Listado de bares recomendados</h2>
+      <div class="grid">
+        <article class="card">
+          <figure class="image-container">
+            <img src="../img/bar-glovo.png" alt="Fachada del Bar El Globo">
+          </figure>
+          <div class="card-content">
+            <a href="https://www.barelglobo.es/" target="_blank" rel="noopener"
+              aria-label="Bar el globo (se abre en una pestaña nueva)">
+              <h2>1. El <em>Bar Globo</em></h2>
+            </a>
+            <p>Si buscas un rincón con solera en el corazón de Bilbao, el Bar Glovo es una parada obligatoria para
+              disfrutar de la esencia del "poteo" tradicional. Es el lugar ideal para degustar unos pintxos
+              artesanales de primera calidad acompañados de un buen txakoli, siempre rodeado de un ambiente auténtico
+              y cercano.
+            </p>
+            <a href="/det1" class="button" aria-label="Ver detalles del Bar El Globo">Ver detalles</a>
+          </div>
+        </article>
 
-  <main>
-    <h1>Nuestras Categorías</h1>
-    <p>Aquí aparecerán las categorías de restaurantes.</p>
+        <article class="card" id="main-content">
+          <figure class="image-container">
+            <img src="../img/bar-la-olla.jpg" alt="Fachada del Bar La Olla en la Plaza Nueva">
+          </figure>
+          <div class="card-content">
+            <a href="https://www.barlaolla.com/es/bienvenidos-al-bar-la-olla/" target="_blank" rel="noopener"
+              aria-label="Bar la olla (se abre en una pestaña nueva)">
+              <h2>2. El <em>Bar La Olla</em> <small>- de la plaza nueva</small></h2>
+            </a>
+            <p>
+              La Olla es un auténtico templo del producto local donde la barra
+              desborda creatividad y tradición a partes iguales. Es famoso por sus pintxos de tortilla (de los mejores
+              de la villa) y sus raciones de jamón ibérico, perfectos para disfrutar en su terraza con todo el sabor
+              del Casco Viejo.
+            </p>
+            <a href="/det2" class="button" aria-label="Ver detalles del Bar La Olla">Ver detalles</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="image-container">
+            <img src="../img/bar-motrikes.jpg" alt="Fachada del Bar Motrikes en la Plaza Nueva">
+          </figure>
+          <div class="card-content">
+            <a href="https://www.instagram.com/motrikestaberna/?hl=en" target="_blank" rel="noopener"
+              aria-label="Bar Motrikes (se abre en una pestaña nueva)">
+              <h2>3. El <em>Bar Motrikes</em></h2>
+            </a>
+            <p>
+              El Motrikes es una leyenda del Casco Viejo donde se viene a por una sola cosa (aunque hay más): su
+              mítico
+              champiñón a la plancha con salsa secreta picante. Es un local pequeño, vibrante y sin artificios, donde
+              el
+              aroma a brasa te guía directamente hasta la barra para vivir el auténtico ambiente de las Siete Calles.
+            </p>
+            <a href="/det2" class="button">Ver detalles</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="image-container">
+            <img src="../img/bar-sorginzulo.jpg" alt="Fachada del Bar Sorginzulo en la Plaza Nueva">
+          </figure>
+          <div class="card-content">
+            <a href="https://sorginzulo.com/" target="_blank" rel="noopener"
+              aria-label="Bar Sorginzulo (se abre en una pestaña nueva)">
+              <h2>4. El <em>Sorginzulo</em></h2>
+            </a>
+            <p>
+              El Sorginzulo es el ejemplo perfecto de cómo la innovación puede convivir con el sabor de siempre. Es
+              famoso por sus creaciones premiadas, como el brioche de rabo de toro o sus impecables calamares, que
+              puedes disfrutar en su animada terraza mientras contemplas el latir del Casco Viejo
+            </p>
+            <a href="/det2" class="button" aria-label="Ver detalles del Bar Sorginzulo">Ver detalles</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="image-container">
+            <img src="../img/bar-guretoki.jpg" alt="Fachada del Bar Guretoki en la Plaza nueva">
+          </figure>
+          <div class="card-content">
+            <a href="https://www.guretoki.com/" target="_blank" rel="noopener"
+              aria-label="Bar guretoki (se abre en una pestaña nueva)">
+              <h2>5. El <em>Guretoki</em></h2>
+            </a>
+            <p>
+              Gure Toki es el lugar donde la vanguardia y la tradición de la Plaza Nueva se dan la mano en cada
+              bocado. No puedes marcharte sin probar su famoso huevo mollet con patata y queso Idiazabal o sus rabas
+              de calamar, auténticas joyas de la minicocina que elevan el concepto de pintxo a otro nivel.
+            </p>
+            <a href="/det2" class="button" aria-label="Ver detalles del Bar Guretoki">Ver detalles</a>
+          </div>
+        </article>
+        <article class="card">
+          <figure class="image-container">
+            <img src="../img/bar-bilbao.jpg" alt="Fachada del bar Cafe Bar Bilbao en la plaza nueva">
+          </figure>
+          <div class="card-content">
+            <a href="https://bilbao-cafebar.com/" target="_blank" rel="noopener"
+              aria-label="Cafe Bar Bilbao (se abre en una pestaña nueva)">
+              <h2>6. El <em>Cafe Bar Bilbao</em></h2>
+            </a>
+            <p>
+              ¡Un viaje en el tiempo al corazón de la Plaza Nueva! El Café Bar Bilbao es mucho más que un bar; es una
+              institución histórica con un precioso interior de azulejos que te traslada a finales del siglo XIX. Es
+              el sitio perfecto para disfrutar de un café con leche cremoso o un vermut rodeado de cultura bilbaína.
+            </p>
+            <a href="/det2" class="button" aria-label="Ver detalles del Bar Cafe Bilbao">Ver detalles</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div id="map" role="application" aria-label="Mapa interactivo con la localización de los bares"></div>
+    <script type="module" src="/src/app.js"></script>
+
   </main>
-
+  <include src="components/footer.html"></include>
 </body>
+
 </html>

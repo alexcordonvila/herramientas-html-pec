@@ -26,19 +26,37 @@ Se ha añadido:
  - npm install --save-dev rimraf npm-run-all
 
 
-En el enunciado se indica que el formato de las url tiene que ser /det1 /det2 indicando que se espera el uso del sistema "Directory-based Routing" o "Clean URLs" por eso hemos definido una estructura de carpetas para organizar los accesos y dentro de cada carpeta su index.html.
+En el enunciado se indica que el formato de las url tiene que ser /categoria /det1 /det2 indicando que se espera el uso del sistema "Directory-based Routing" o "Clean URLs" por eso hemos definido una estructura de carpetas para organizar los accesos y dentro de cada carpeta su index.html.
 
+Para que parcel detecte correctamente todos los "entry points" hemos modificado el package.json con el uso de patrones de búsqueda (glob):
+```json
+  "parcel:dev": "parcel src/**/*.html",
+  "parcel:build": "parcel build src/*.html src/**/*.html --public-url ./",
+```
 
-1. Soporte a navegadores antiguos.
+3. Soporte a navegadores antiguos.
 Se ha aprovechado el proceso de configuración inicial para añadir el campo "browserlist" al package.json con la configuración que se pide en el enunciado. Para ello hemos usado la configuración "last 10 years" y además hemos añadido "not dead" para excluir aquellos que no tienen soporte oficial o uso real actual. Hemos visto que esto ayuda a mantener un tamaño reducido de los archivos.
 Hemos aprendido que podemos usar npx browserlist para ver una lista completa de los navegadores en función de nuestra configuración y que es importante saber que Parcel va a aumentar bastante el tamaño de la build final para dar soporte a esos navegadores de hasta 10 años de antiguedad.
 
-1. Utilización de pre/postprocesadores.
-A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del mismo en este apartado. Para que parcel empiece a usar postCSS creamos el fichero .postcssrc en la raiz del proyecto. 
-1. Dependencia externa.
-2. Semántica y accesibilidad.
-3. Creación y publicación a Git y Github.
+4. Utilización de pre/postprocesadores.
+A pesar de que se diga de postCSS no es un preprocessor comentaremos el uso del mismo en este apartado. Para que parcel empiece a usar postCSS creamos el fichero .postcssrc en la raiz del proyecto. Hemos usado autoprefixer (añade prefijos de navegadores para poder soportar css moderno en todos los navegadores) y css nano ``npm install cssnano``  (minimizador de css) para experimentar en el uso de post-procesamiento 
+Como preprocesador extra hemos decidido usar SASS porque hasta este momento no lo he usado nunca y me parece un buen momento para usarlo aunque no aproveche todas sus funcionalidades. Nos permite escribir los estilos de manera más organizada, mayor reusabilidad, variables... 
+
+5. Dependencia externa.
+Para nuestra web de recomendaciones de restaurantes en Bilbao nos hemos planteado usar el paquete Leaflet para mostrar un mapa de los restaurantes. Se ha configurado siguiendo la documentación ```https://leafletjs.com/examples/quick-start/```. Para las 3 imagenes dentro de detalle hemos usado el paquete npm de SplideJS ```https://splidejs.com/```.
+
+6. Semántica y accesibilidad.
+Para validar la semántica hemos usado el Nu Html checker, siempre pasandole el html de la build para producción.
+Hemos añadido aria-labels en los puntos necesarios como en botones de "ver detalles" en la página de categoria, en los buttons de la home o la navbar.
+
+La acessibilidad de la web la hemos tratado siguiendo los siguientes puntos:
+- Todas las imagenes de la web tienen el atributo `alt` con descripciones detalladas del contenido.
+- Hemos seleccionado un color de fondo y letra con un contraste de 17:04:1 en la página de categoria validado en ```https://webaim.org/resources/contrastchecker/?fcolor=1C1C1C&bcolor=FFFFFF``` y de 15:19:1 en la página de detalles y links validado en ```https://webaim.org/resources/contrastchecker/?fcolor=1C1C1C&bcolor=F0F2F5```.
+- Hemos añadido skip links siguiendo las recomendaciones de ```https://webaim.org/techniques/skipnav/```
+
+7. Creación y publicación a Git y Github.
 La creación del proyecto se ha hecho primero en local usando Parcel. Como parcel ya añade un .git en el proyecto generado hemos podido publicarlo en github siguiendo la documentación y que se puede encontrar en el siguiente enlace: https://github.com/alexcordonvila/herramientas-html-pec
 
-1. Publicación a internet
+8. Publicación a internet
 Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
+Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que si deployamos en la rama master enseguida nos quedamos sin tokens. Se ha decidido crear una rama para hacer previews ya que netrlify no descuenta tokens en deploys de ramas. Una vez tengamos versiones definitivas las iremos pasando a master gastando esos tokens.
