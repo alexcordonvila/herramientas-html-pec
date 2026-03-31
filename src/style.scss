@@ -113,8 +113,8 @@ main {
   position: absolute;
   top: -200px; 
   left: 0;
-  background: #e63946; 
-  color: white;
+  background: $rojo-bilbao; 
+  color: $blanco;
   padding: 10px 20px;
   z-index: 9999;
   font-weight: bold;
@@ -233,7 +233,7 @@ main {
   flex-direction: column;
 }
 .grid {
-  align-items: center;
+  align-items: stretch;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
@@ -294,7 +294,7 @@ main {
       font-size: $font-size-small;
       font-weight: 700;
       text-transform: uppercase;
-
+      margin-top: auto;
       &:hover {
         background-color: $rojo-bilbao;
         color: $blanco;
