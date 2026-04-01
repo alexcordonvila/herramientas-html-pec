@@ -1,3 +1,4 @@
+# PEC1
 1. Proceso de desarrollo para generar la plantilla de inicio con Parcel.
 En primer lugar hemos verificado que tenemos node a una versión superior a la 20.x. con "node -v".
 Luego hemos seguido la documentación de Parcel para crear el proyecto base con:
@@ -60,3 +61,17 @@ La creación del proyecto se ha hecho primero en local usando Parcel. Como parce
 8. Publicación a internet
 Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
 Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que si deployamos en la rama master enseguida nos quedamos sin tokens. Se ha decidido crear una rama para hacer previews ya que netrlify no descuenta tokens en deploys de ramas. Una vez tengamos versiones definitivas las iremos pasando a master gastando esos tokens.
+
+# PEC2
+
+1. Para el primer punto, como se pide que todas las imágenes del proyecto sean responsive y que al menos debe haber una imágen por cada técnica, hemos analizado los problemas actuales en las imágenes y donde podemos aplicar cada una de las técnicas.
+   Hemos detectado que la imagen de la home es muy pesada y tarda en cargar.
+   Hemos detectado que en /categoria usamos imagenes 
+   
+   - [ ] Se ha usado la técnica de ancho variable (Descriptores w) en la mayoria de imagenes porque esta tecnica incluye tanto ancho variable como densidad variable como en la home, /det1 y /det2.
+  
+   - [ ] Se ha usado la técnica de resolución variable en densidad 1x, 2x para las imagenes de tamaño fijo... en las imágenes del carousel de /det1 y /det2. De cada imagen hemos variado la cantidad de píxeles a servir.
+  
+   - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image". Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. 
+
+2. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:

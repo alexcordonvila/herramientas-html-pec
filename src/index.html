@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bilbaofoodies</title>
   <link rel="stylesheet" href="/src/style.scss">
 </head>
+
 <body>
   <include src="components/header.html"></include>
   <main>
     <div class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">Bilbao<span>Foodies</span></h1>
-        <p class="hero-subtitle">Tu guía de confianza por las barras de Bilbao.</p>
-      </div>
-      <div class="hero-actions">
-        <a href="/categoria" class="btn btn-primary" aria-label="Navegación a la página de Restaurantes">Ver Restaurantes</a>
-        <a href="/links" class="btn btn-outline" aria-label="Navegación a la página de enlaces y fuentes">Fuentes</a>
+      <picture class="hero-background">
+        <source media="(max-width: 600px)" srcset="./img/hero-mobile.jpg?as=webp&width=400 400w, 
+            ./img/hero-mobile.jpg?as=webp&width=800 800w" sizes="100vw" type="image/webp">
+
+        <source srcset="./img/hero-image.jpg?as=webp&width=800 800w, 
+            ./img/hero-image.jpg?as=webp&width=1600 1600w" sizes="100vw" type="image/webp">
+
+        <img src="./img/hero-image.jpg?width=1200" alt="Barra de pintxos en Bilbao" class="hero-img" loading="eager">
+      </picture>
+
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title">Bilbao<span>Foodies</span></h1>
+          <p class="hero-subtitle">Tu guía de confianza por las barras de Bilbao.</p>
+          <div class="hero-actions">
+            <a href="/categoria" class="btn btn-primary" aria-label="Ver Restaurantes">Ver Restaurantes</a>
+            <a href="/links" class="btn btn-outline" aria-label="Fuentes">Fuentes</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
   <include src="components/footer.html"></include>
 </body>
+
 </html>
