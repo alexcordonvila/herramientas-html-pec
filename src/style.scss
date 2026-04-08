@@ -75,6 +75,9 @@ main {
   }
 
   .titulo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     a {
       font-family: $font-main;
       font-size: $font-size-xlarge;
@@ -486,7 +489,6 @@ footer {
       .hero-title {
         font-size: $font-size-h2;
       }
-
       .hero-subtitle {
         font-size: $font-size-base;
         padding: 0 10px;
