@@ -68,9 +68,9 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
    Hemos detectado que la imagen de la home es muy pesada y tarda en cargar.
    Hemos detectado que en /categoria usamos imagenes 
    
-   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en la mayoria de imagenes porque esta tecnica incluye tanto ancho variable como densidad variable como en la home, /det1 y /det2. Para los breakpoints hemos usado una media de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
+   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel y la imagen principal de /det1 y /det2. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
   
-   - [ ] Se ha usado la técnica de resolución variable en densidad 1x, 2x para las imagenes de tamaño fijo. Para ello hemos añadido un logotipo en la navbar donde poder aplicar esta técnica.
+   - [x] Se ha usado la técnica de resolución variable en densidad 1x, 2x para las imagenes de tamaño fijo. Para ello hemos añadido un logotipo en la navbar donde poder aplicar esta técnica.
   
    - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image". Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. Al pasar a formato mobile hacemos el cambio de hero-image a hero-mobile.
 
