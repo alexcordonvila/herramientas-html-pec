@@ -68,7 +68,7 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
    Hemos detectado que la imagen de la home es muy pesada y tarda en cargar.
    Hemos detectado que en /categoria usamos imagenes 
    
-   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel /det1 y /det2. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
+   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel /det1 y /det2 o en las cards de /categoria. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
    En este punto hemos aprendido que es muy importante tener en cuenta que los DPI del dispositivo que carga la página afectan en como el navegador va a pedir la imagen a descargar. Para calcular la imagen que el navegador va a descargar podemos usar este calculo:
    ```
     Ancho_Pantalla × %_Ocupado × DPR = Pixeles_Necesarios
