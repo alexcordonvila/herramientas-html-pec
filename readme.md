@@ -68,10 +68,20 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
    Hemos detectado que la imagen de la home es muy pesada y tarda en cargar.
    Hemos detectado que en /categoria usamos imagenes 
    
-   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel y la imagen principal de /det1 y /det2. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
+   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel /det1 y /det2. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
+   En este punto hemos aprendido que es muy importante tener en cuenta que los DPI del dispositivo que carga la página afectan en como el navegador va a pedir la imagen a descargar. Para calcular la imagen que el navegador va a descargar podemos usar este calculo:
+   ```
+    Ancho_Pantalla × %_Ocupado × DPR = Pixeles_Necesarios
+   ```
+
+  Por ejemplo, si tenemos una imagen en la web que siempre ocupa 400px de ancho y tenemos dos opciones en el srcset: una de 400w y otra de 800w.
+
+  Para un "Monitor Estándar (DPI 1)", 400px × 1 = 400px. Entonces necesitamos 400 píxeles físicos y el navegador va a descargar la de 400w. En canvio, para un "Móvil/Laptop Retina (DPI 2)" el cálculo es 400px × 2= 800px, aunque el hueco mide 400, la pantalla es densa y necesita el doble para no verse borrosa y entonces el navegador va a descargar la de 800w.
+
+   Tenemos que diferenciar entre el número de píxeles físicos y el de píxeles lógicos 
   
    - [x] Se ha usado la técnica de resolución variable en densidad 1x, 2x para las imagenes de tamaño fijo. Para ello hemos añadido un logotipo en la navbar donde poder aplicar esta técnica.
   
-   - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image". Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. Al pasar a formato mobile hacemos el cambio de hero-image a hero-mobile.
+   - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image" y para la imagen destacada de las páginas de detalle /det1 y /det2. Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. Al pasar a formato mobile hacemos el cambio de hero-image a hero-mobile.
 
-2. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:
+1. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:
