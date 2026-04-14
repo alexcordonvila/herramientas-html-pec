@@ -9,7 +9,7 @@ $color-beige: rgb(241, 241, 203);
 $color-blanco-fondo: #f0f2f5;
 $negro-light: #1c1c1c;
 
-$transicion: all 0.3s ease;
+$transicion: 0.3s ease;
 // Variables de tipografía
 $font-main: "Alegreya Sans", sans-serif;
 $font-size-xnano: 0.45em;
@@ -94,23 +94,42 @@ main {
   }
 
   .links-principales {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    font-family: $font-main;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-family: $font-main;
 
-    a {
-      text-decoration: none;
-      color: $negro-light;
-      font-weight: 500;
-      font-size: $font-size-small;
-      transition: $transicion;
+  a {
+    text-decoration: none;
+    color: $negro-light;
+    font-weight: 500;
+    font-size: $font-size-small;
+    transition: color $transicion;
+    position: relative; 
 
-      &:hover {
-        color: $color-verde-euskadi;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0px; 
+      width: 100%;
+      height: 2px; 
+      background-color: $color-verde-euskadi;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform $transicion;
+    }
+
+    &:hover {
+      color: $color-verde-euskadi;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
       }
     }
   }
+}
 }
 .skip-link {
   position: absolute;
@@ -146,7 +165,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; // Reemplaza al background-size: cover
+    object-fit: cover; 
     z-index: 1;
   }
   .hero-overlay {
@@ -158,7 +177,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // Aquí mueves el gradiente que tenías en el background
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(23, 23, 23, 0.639));
     flex: 1;
   }
@@ -195,7 +213,7 @@ main {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 700;
-    transition: 0.3s;
+    transition: 0.3s ease-out;
   }
 
   .btn-primary {
@@ -259,7 +277,19 @@ main {
   font-family: $font-main;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .card {
+  animation: fadeIn 1.3s ease;
   background: $blanco;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);

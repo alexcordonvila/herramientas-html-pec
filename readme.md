@@ -84,4 +84,11 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
   
    - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image" y para la imagen destacada de las páginas de detalle /det1 y /det2. Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. Al pasar a formato mobile hacemos el cambio de hero-image a hero-mobile.
 
-1. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:
+2. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:
+
+3. Se han añadido animaciones en los siguientes elementos:
+   1. En la navbar se ha añadido una transición animada de subrallado al hacer hover encima de cada opción. Mencionar la fuente de documentación de esta animación: https://css-irl.info/animating-underlines/
+   
+   2. En la navbar se ha añadido una transición animada de color de letra al hacer hover encima de cada opción.
+   3. TODO: Añadir animaciones por CSS
+
