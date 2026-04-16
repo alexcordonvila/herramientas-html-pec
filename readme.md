@@ -90,5 +90,7 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
    1. En la navbar se ha añadido una transición animada de subrallado al hacer hover encima de cada opción. Mencionar la fuente de documentación de esta animación: https://css-irl.info/animating-underlines/
    
    2. En la navbar se ha añadido una transición animada de color de letra al hacer hover encima de cada opción.
-   3. TODO: Añadir animaciones por CSS
+   3. En la página de /categorias se ha añadido una animación por CSS en las cards que afecta a la opacidad y a la escala haciendo que en lugar de que aparezcan las cards de golpe, aparecen de manera suave y dinámica.
+
+4. Se ha añadido un elemento svg en la homepage animado por CSS añadiendo el svg directamente en el html para poder animarlo por CSS. La alternativa a esto era añadir la animación dentro del svg para cargarlo como <object> pero con ello no podemos cumplir la condición de animarlo por CSS como se explicita en el enunciado. Añadiendo el svg dentro del HTML es la manera de que la animación cargue más rápido evitando retardos por cargarlo desde archivo.
 

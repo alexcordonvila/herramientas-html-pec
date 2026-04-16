@@ -94,42 +94,42 @@ main {
   }
 
   .links-principales {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  font-family: $font-main;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-family: $font-main;
 
-  a {
-    text-decoration: none;
-    color: $negro-light;
-    font-weight: 500;
-    font-size: $font-size-small;
-    transition: color $transicion;
-    position: relative; 
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0px; 
-      width: 100%;
-      height: 2px; 
-      background-color: $color-verde-euskadi;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform $transicion;
-    }
-
-    &:hover {
-      color: $color-verde-euskadi;
+    a {
+      text-decoration: none;
+      color: $negro-light;
+      font-weight: 500;
+      font-size: $font-size-small;
+      transition: color $transicion;
+      position: relative;
 
       &::after {
-        transform: scaleX(1);
-        transform-origin: left;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background-color: $color-verde-euskadi;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform $transicion;
+      }
+
+      &:hover {
+        color: $color-verde-euskadi;
+
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
       }
     }
   }
-}
 }
 .skip-link {
   position: absolute;
@@ -147,6 +147,92 @@ main {
 /*_Navbar*/
 
 /*index.html_*/
+.bilbao-foodies-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  animation: MyScale 2s ease-in-out forwards;
+}
+
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+#bilbao-foodies-path path {
+  fill: transparent;
+  stroke-width: 2;
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
+}
+#bilbao-foodies-path path:first-child {
+  animation: TextAnimationWhite 2.3s ease-in-out 1 forwards;
+  stroke: #ffffff;
+}
+.path-foodies {
+  animation: TextAnimationRed 2.3s ease-in-out 1 forwards;
+
+  stroke: #a92328;
+}
+@keyframes MyScale {
+  0% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes TextAnimationWhite {
+  0% {
+    stroke-dashoffset: 470;
+  }
+  20% {
+    fill: transparent;
+  }
+  100% {
+    fill: #ffffff;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes TextAnimationRed {
+  0% {
+    stroke-dashoffset: 470;
+  }
+  20% {
+    fill: transparent;
+  }
+  100% {
+    fill: $rojo-bilbao;
+    stroke-dashoffset: 0;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -165,7 +251,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     z-index: 1;
   }
   .hero-overlay {
@@ -182,28 +268,25 @@ main {
   }
 
   .hero-content {
+    width: 90%; 
+    max-width: 600px;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  .hero-title {
-    font-size: $font-size-h1;
-    margin: 0;
-    text-transform: uppercase;
-    span {
-      color: $rojo-bilbao;
-    }
-  }
   .hero-subtitle {
     font-size: $font-size-large;
+    margin: 20px 0;
   }
 }
 
 .hero-actions {
   display: flex;
-  gap: 8px;
+  gap: 15px;
   margin-top: 5px;
   justify-content: center;
 
@@ -280,7 +363,7 @@ main {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(.95);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -510,6 +593,13 @@ footer {
     }
   }
   /*index.html_*/
+  // .bilbao-foodies-header {
+  //   width: 100%;
+  //   max-width: 320px;
+  //   margin: 0 auto;
+  //   padding: 0 20px;
+  //   display: flex;
+  // }
   .hero {
     min-height: 70vh;
     .hero-content {
