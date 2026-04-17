@@ -1,3 +1,4 @@
+# PEC1
 1. Proceso de desarrollo para generar la plantilla de inicio con Parcel.
 En primer lugar hemos verificado que tenemos node a una versión superior a la 20.x. con "node -v".
 Luego hemos seguido la documentación de Parcel para crear el proyecto base con:
@@ -60,3 +61,39 @@ La creación del proyecto se ha hecho primero en local usando Parcel. Como parce
 8. Publicación a internet
 Tener el proyecto en github nos ha permitido vincularlo facilmente a Netlify. Para ello hemos seguido los pasos de la documentación haciendo incapié en que el proyecto se encuentre en la raiz del repositorio para que la publicación sea sencilla. 
 Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que si deployamos en la rama master enseguida nos quedamos sin tokens. Se ha decidido crear una rama para hacer previews ya que netrlify no descuenta tokens en deploys de ramas. Una vez tengamos versiones definitivas las iremos pasando a master gastando esos tokens.
+
+# PEC2
+
+1. Para el primer punto, como se pide que todas las imágenes del proyecto sean responsive y que al menos debe haber una imágen por cada técnica, hemos analizado los problemas actuales en las imágenes y donde podemos aplicar cada una de las técnicas.
+   Hemos detectado que la imagen de la home es muy pesada y tarda en cargar.
+   Hemos detectado que en /categoria usamos imagenes 
+   
+   - [x] Se ha usado la técnica de ancho variable (Descriptores w) en las imagenes que potencialmente vayan a variar de tamaño al mostrarse en diferentes dispositivos como en el carousel /det1 y /det2 o en las cards de /categoria. Para los breakpoints hemos usado una media del ancho de los dispositivos objetivo (móviles, tabletas y desktop). 400px para optimizar la carga en móviles básicos, 800px para tablets y móviles de alta densidad y 1200px para desktop. De esta manera aseguramos un equilibrio entre calidad visual y el peso del archivo que se va a descargar en el navegador.
+   En este punto hemos aprendido que es muy importante tener en cuenta que los DPI del dispositivo que carga la página afectan en como el navegador va a pedir la imagen a descargar. Para calcular la imagen que el navegador va a descargar podemos usar este calculo:
+   ```
+    Ancho_Pantalla × %_Ocupado × DPR = Pixeles_Necesarios
+   ```
+
+  Por ejemplo, si tenemos una imagen en la web que siempre ocupa 400px de ancho y tenemos dos opciones en el srcset: una de 400w y otra de 800w.
+
+  Para un "Monitor Estándar (DPI 1)", 400px × 1 = 400px. Entonces necesitamos 400 píxeles físicos y el navegador va a descargar la de 400w. En canvio, para un "Móvil/Laptop Retina (DPI 2)" el cálculo es 400px × 2= 800px, aunque el hueco mide 400, la pantalla es densa y necesita el doble para no verse borrosa y entonces el navegador va a descargar la de 800w.
+
+   Tenemos que diferenciar entre el número de píxeles físicos y el de píxeles lógicos 
+  
+   - [x] Se ha usado la técnica de resolución variable en densidad 1x, 2x para las imagenes de tamaño fijo. Para ello hemos añadido un logotipo en la navbar donde poder aplicar esta técnica.
+  
+   - [x] Se ha usado la técnica de dirección de arte en la imagen principal de la home "hero image" y para la imagen destacada de las páginas de detalle /det1 y /det2. Para dispositivos mobiles mostraremos una imagen recortada mostrando mejor detalle del contenido. Al pasar a formato mobile hacemos el cambio de hero-image a hero-mobile.
+
+2. Para el segundo punto hemos analizado todas las imágenes que estamos usando y hemos valorado qué formatos usar en cada caso. En la tabla siguiente mostramos el resultado de hacer el análisis del antes y después:
+
+3. Se han añadido animaciones en los siguientes elementos:
+   1. En la navbar se ha añadido una transición animada de subrallado al hacer hover encima de cada opción. Mencionar la fuente de documentación de esta animación: https://css-irl.info/animating-underlines/
+   
+   2. En la navbar se ha añadido una transición animada de color de letra al hacer hover encima de cada opción.
+   3. En la página de /categorias se ha añadido una animación por CSS en las cards que afecta a la opacidad y a la escala haciendo que en lugar de que aparezcan las cards de golpe, aparecen de manera suave y dinámica.
+
+4. Para el ejercicio de añadir un elemento svg animado se ha optado por cambiar el título principal en tipografia por un título en SVG creado en Figma. Las letras en SVG tienen dos path para poder pintar uno de blanco y el otro de rojo.Se ha integrado el elemento SVG directamente en el DOM (HTML inline) para permitir su manipulación mediante CSS y cumplir así con el requisito del enunciado.  Aunque la carga mediante <object> era una alternativa, esta limitaba el control por css externo. La integración directa en el html no solo facilita la animación por css, sino que optimiza el rendimiento al eliminar peticiones HTTP adicionales y evitar el retardo visual en el renderizado si se carga como archivo.
+
+5. Para el ejercicio de añadir un clippath hemos añadido un recurso gráfico tipo "banner de descuento" creando una forma de bandera o "cupón de descuento" de color rojo.
+   
+

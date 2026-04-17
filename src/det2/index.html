@@ -27,7 +27,16 @@
                     La amplitud de su barra y su terraza invitan a disfrutar del pulso de la ciudad en un entorno que
                     respira elegancia y dinamismo a partes iguales.</p>
                 <figure class="detalle-image-container">
-                    <img src="/src/img/bar-la-olla.jpg" alt="Fachada del bar La Olla en la plaza nueva." class="detalle-image">
+                    <picture class="detalle-picture">
+                        <source media="(max-width: 768px)" srcset="/src/img/bar-la-olla-mobile.jpg?as=webp&width=400 400w, 
+                            /src/img/bar-la-olla-mobile.jpg?as=webp&width=800 800w" sizes="100vw" type="image/webp">
+
+                        <source srcset="/src/img/bar-la-olla.jpg?as=webp&width=800 800w, 
+                            /src/img/bar-la-olla.jpg?as=webp&width=1200 1200w" sizes="50vw" type="image/webp">
+
+                        <img src="/src/img/bar-la-olla.jpg?width=800"
+                            alt="Fachada del bar La Olla en la Plaza Nueva de Bilbao" class="detalle-image">
+                    </picture>
                 </figure>
             </section>
 
@@ -45,17 +54,23 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="/src/img/bar-laolla-pintxo1.jpg" alt="Pintxo de autor de huevo">
+                                <img src="/src/img/bar-laolla-pintxo1.jpg?as=webp&width=800" srcset="/src/img/bar-laolla-pintxo1.jpg?as=webp&width=400 400w, 
+            /src/img/bar-laolla-pintxo1.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 100vw, 33vw"
+                                    alt="Pintxo de autor de huevo">
                             </li>
                             <li class="splide__slide">
-                                <img src="/src/img/bar-laolla-pintxo2.jpg" alt="Pintxo de autor de Salmon">
+                                <img src="/src/img/bar-laolla-pintxo2.jpg?as=webp&width=800" srcset="/src/img/bar-laolla-pintxo2.jpg?as=webp&width=400 400w, 
+            /src/img/bar-laolla-pintxo2.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 100vw, 33vw"
+                                    alt="Pintxo de autor de Salmon">
                             </li>
                             <li class="splide__slide">
-                                <img src="/src/img/bar-laolla-pintxo3.jpg" alt="Pintxo de autor de Tomate">
+                                <img src="/src/img/bar-laolla-pintxo3.jpg?as=webp&width=800" srcset="/src/img/bar-laolla-pintxo3.jpg?as=webp&width=400 400w, 
+            /src/img/bar-laolla-pintxo3.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 100vw, 33vw"
+                                    alt="Pintxo de autor de Tomate">
                             </li>
                         </ul>
                     </div>
-                     <figcaption>
+                    <figcaption>
                         <em>Bar La olla</em> | Pintxos de autor
                     </figcaption>
                 </figure>

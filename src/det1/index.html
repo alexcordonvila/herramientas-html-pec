@@ -26,8 +26,18 @@
                     eleva el concepto del pintxo a la categoría de arte. Al cruzar su puerta, el visitante se encuentra
                     con una barra que es un auténtico espectáculo visual, donde los colores y aromas anticipan una
                     experiencia gastronómica de primer nivel en un ambiente cercano y vibrante.</p>
-                <figure class="detalle-image-container">
-                    <img src="/src/img/bar-glovo.png" alt="Fachada del bar Cafe Bar Bilbao en la plaza nueva" class="detalle-image">
+         
+                 <figure class="detalle-image-container">
+                    <picture class="detalle-picture">
+                        <source media="(max-width: 768px)" srcset="/src/img/bar-globo-mobile.png?as=webp&width=400 400w, 
+                            /src/img/bar-globo-mobile.png?as=webp&width=800 800w" sizes="100vw" type="image/webp">
+
+                        <source srcset="/src/img/bar-globo.png?as=webp&width=800 800w, 
+                            /src/img/bar-globo.png?as=webp&width=1200 1200w" sizes="50vw" type="image/webp">
+
+                        <img src="/src/img/bar-globo.png?width=800"
+                            alt="Fachada del bar Cafe Bar Bilbao" class="detalle-image">
+                    </picture>
                 </figure>
             </section>
             <section id="main-content">
@@ -44,17 +54,23 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="/src/img/bar-globo-pintxo1.jpg" alt="Pintxo de Txanurro gratinado">
+                                <img src="/src/img/bar-globo-pintxo1.jpg?as=webp&width=800" srcset="/src/img/bar-globo-pintxo1.jpg?as=webp&width=400 400w,
+                                /src/img/bar-globo-pintxo1.jpg?as=webp&width=800 800w"
+                                    sizes="(max-width: 768px) 100vw, 33vw" alt="Pintxo de Txanurro gratinado">
                             </li>
                             <li class="splide__slide">
-                                <img src="/src/img/bar-globo-pintxo2.jpg" alt="Pintxo de patata con trufa">
+                                <img src="/src/img/bar-globo-pintxo2.jpg?as=webp&width=800" srcset="/src/img/bar-globo-pintxo2.jpg?as=webp&width=400 400w, 
+            /src/img/bar-globo-pintxo2.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 100vw, 33vw"
+                                    alt="Pintxo de patata con trufa">
                             </li>
                             <li class="splide__slide">
-                                <img src="/src/img/bar-globo-pintxo3.jpg" alt="Pintxo de txipiron gratinado">
+                                <img src="/src/img/bar-globo-pintxo3.jpg?as=webp&width=800" srcset="/src/img/bar-globo-pintxo3.jpg?as=webp&width=400 400w, 
+            /src/img/bar-globo-pintxo3.jpg?as=webp&width=800 800w" sizes="(max-width: 768px) 100vw, 33vw"
+                                    alt="Pintxo de txipiron gratinado">
                             </li>
                         </ul>
                     </div>
-                     <figcaption>
+                    <figcaption>
                         <em>Bar el globo</em> | Pintxos de autor
                     </figcaption>
                 </figure>
