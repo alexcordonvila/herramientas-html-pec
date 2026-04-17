@@ -92,5 +92,8 @@ Hemos visto que Netlify nos ofrece 500 tokens para integración contínua y que 
    2. En la navbar se ha añadido una transición animada de color de letra al hacer hover encima de cada opción.
    3. En la página de /categorias se ha añadido una animación por CSS en las cards que afecta a la opacidad y a la escala haciendo que en lugar de que aparezcan las cards de golpe, aparecen de manera suave y dinámica.
 
-4. Se ha añadido un elemento svg en la homepage animado por CSS añadiendo el svg directamente en el html para poder animarlo por CSS. La alternativa a esto era añadir la animación dentro del svg para cargarlo como <object> pero con ello no podemos cumplir la condición de animarlo por CSS como se explicita en el enunciado. Añadiendo el svg dentro del HTML es la manera de que la animación cargue más rápido evitando retardos por cargarlo desde archivo.
+4. Para el ejercicio de añadir un elemento svg animado se ha optado por cambiar el título principal en tipografia por un título en SVG creado en Figma. Las letras en SVG tienen dos path para poder pintar uno de blanco y el otro de rojo.Se ha integrado el elemento SVG directamente en el DOM (HTML inline) para permitir su manipulación mediante CSS y cumplir así con el requisito del enunciado.  Aunque la carga mediante <object> era una alternativa, esta limitaba el control por css externo. La integración directa en el html no solo facilita la animación por css, sino que optimiza el rendimiento al eliminar peticiones HTTP adicionales y evitar el retardo visual en el renderizado si se carga como archivo.
+
+5. Para el ejercicio de añadir un clippath hemos añadido un recurso gráfico tipo "banner de descuento" creando una forma de bandera o "cupón de descuento" de color rojo.
+   
 

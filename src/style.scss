@@ -152,7 +152,7 @@ main {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -185,7 +185,6 @@ main {
 }
 .path-foodies {
   animation: TextAnimationRed 2.3s ease-in-out 1 forwards;
-
   stroke: #a92328;
 }
 @keyframes MyScale {
@@ -233,6 +232,54 @@ main {
   border: 0;
 }
 
+.bandera-descuento {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  width: 90px;
+  height: 100px;
+  background-color: #a92328;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.bandera-content {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  font-size: x-small;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $blanco;
+  text-align: center;
+}
+
+.txt-descuento {
+  font-size: x-small;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.txt-descuento2 {
+  font-size: x-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.txt-codigo {
+  font-size: x-small;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -268,7 +315,7 @@ main {
   }
 
   .hero-content {
-    width: 90%; 
+    width: 90%;
     max-width: 600px;
     flex: 1;
     display: flex;
@@ -592,14 +639,6 @@ footer {
       text-align: center;
     }
   }
-  /*index.html_*/
-  // .bilbao-foodies-header {
-  //   width: 100%;
-  //   max-width: 320px;
-  //   margin: 0 auto;
-  //   padding: 0 20px;
-  //   display: flex;
-  // }
   .hero {
     min-height: 70vh;
     .hero-content {
@@ -614,7 +653,10 @@ footer {
     }
   }
   /*_index.html*/
-
+  .bandera-descuento {
+    left: 50%;
+    transform: translateX(-50%);
+  }
   /*links.html_*/
   .links-page {
     padding: 4rem 2rem;
