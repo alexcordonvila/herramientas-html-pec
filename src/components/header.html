@@ -1,16 +1,23 @@
 <header class="navbar-principal">
   <div class="navbar-container">
     <div class="titulo">
-      <img 
-      src="/src/img/logo.png?as=webp&width=40" 
+  <picture>
+    <source 
       srcset="/src/img/logo.png?as=webp&width=40 1x, 
               /src/img/logo.png?as=webp&width=80 2x,
               /src/img/logo.png?as=webp&width=120 3x" 
+      type="image/webp">
+    
+    <img 
+      src="/src/img/logo.png?width=40" 
+      srcset="/src/img/logo.png?width=80 2x, 
+              /src/img/logo.png?width=120 3x" 
       alt="Logo de Bilbao Foodies" 
       width="40" 
       height="40">
-      <a href="/">Bilbao<span>Foodies</span></a>
-    </div>
+  </picture>
+  <a href="/">Bilbao<span>Foodies</span></a>
+</div>
     <nav class="links-principales" aria-label="Navegación principal">
       <a href="/" aria-label="Navegación a Inicio">Inicio</a>
       <a href="/categoria" aria-label="Navegación a guía de Restaurantes">Restaurantes</a>
