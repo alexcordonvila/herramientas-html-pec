@@ -12,7 +12,7 @@
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
     "parcel:dev": "parcel src/**/*.html --open",
-    "parcel:build": "parcel build src/**/*.html --public-url /",
+    "parcel:build": "parcel build 'src/**/*.html' --public-url /",
     "clean": "rimraf dist .parcel-cache"
 },
   "devDependencies": {
