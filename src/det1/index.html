@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar Globo - Bilbaofoodies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/src/style.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="/src/style.scss">
+    <script type="module" src="/src/detalle.js"></script>
+
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 </head>
-
-
 <body>
     <a href="#main-content" class="skip-link">Ir al contenido principal</a>
     <include src="components/header.html"></include>
@@ -38,8 +37,8 @@
                         <source srcset="/src/img/bar-globo.png?as=webp&width=800 800w, 
                             /src/img/bar-globo.png?as=webp&width=1200 1200w" sizes="50vw" type="image/webp">
 
-                        <img src="/src/img/bar-globo.png?width=800" alt="Fachada del bar Cafe Bar Bilbao"
-                            class="detalle-image">
+                        <img src="/src/img/bar-globo.png?width=800" alt="Fachada del bar Globo"
+                            class="detalle-image" fetchpriority="high">
                     </picture>
                 </figure>
             </section>
@@ -94,7 +93,6 @@
                         <em>Bar el globo</em> | Pintxos de autor
                     </figcaption>
                 </figure>
-                <script type="module" src="/src/detalle.js"></script>
 
             </section>
             <section>
@@ -108,7 +106,7 @@
                     el Globo es, sin duda, el destino donde tu viaje gastronómico alcanzará su punto más alto.
                 </p>
                 <figure>
-                    <iframe src="https://www.youtube.com/embed/Q7HZVRxSHcs?si=350czuqENfr0g6mu" title="Bar El Globo"
+                    <iframe src="https://www.youtube.com/embed/Q7HZVRxSHcs?si=350czuqENfr0g6mu" title="Bar El Globo" loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
@@ -119,7 +117,6 @@
             </section>
         </article>
     </main>
-
     <include src="components/footer.html"></include>
 </body>
 
