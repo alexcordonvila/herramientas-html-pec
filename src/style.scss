@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Alegreya Sans Local';
+  src: url('./fonts/alegreya-sans-v26-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Alegreya Sans Local';
+  src: url('./fonts/alegreya-sans-v26-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 //Variables de colores
 $rojo-bilbao: rgb(176, 18, 18);
 $color-verde-euskadi: rgba(0, 155, 72);
@@ -8,7 +23,7 @@ $negro-light: #1c1c1c;
 
 $transicion: 0.3s ease;
 // Variables de tipografía
-$font-main: "Alegreya Sans", sans-serif;
+$font-main: 'Alegreya Sans Local', sans-serif;
 $font-size-xnano: 0.45em;
 $font-size-nano: 0.55em;
 $font-size-micro: 0.625em;
@@ -29,6 +44,14 @@ $padding-right: 14vw;
   Formato recomendado porque hace que los layouts sean más fáciles de controlar.
   Nota: Modificar la mínimo possible
 ===========================================================*/
+
+
+
+body {
+  font-family: 'Alegreya Sans Local', sans-serif;
+}
+
+
 * {
   margin: 0;
   padding: 0;
