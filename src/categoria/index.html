@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categoría - Bilbaofoodies</title>
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="preload" href="../fonts/alegreya-sans-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/alegreya-sans-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/src/style.scss">
   <script type="module" src="/src/app.js" defer></script>
 </head>
@@ -27,7 +29,7 @@
             ../img/bar-globo.png?as=webp&width=800 800w, 
             ../img/bar-globo.png?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" alt="Fachada del Bar El Globo"
-              loading="eager">
+              loading="eager" fetchpriority=high>
           </figure>
           <div class="card-content">
             <a href="https://www.barelglobo.es/" target="_blank" rel="noopener"
