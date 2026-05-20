@@ -13,7 +13,6 @@
   font-style: normal;
   font-display: swap;
 }
-//Variables de colores
 $rojo-bilbao: rgb(176, 18, 18);
 $color-verde-euskadi: rgba(0, 155, 72);
 $blanco: #ffffff;
@@ -22,7 +21,6 @@ $color-blanco-fondo: #f0f2f5;
 $negro-light: #1c1c1c;
 
 $transicion: 0.3s ease;
-// Variables de tipografía
 $font-main: 'Alegreya Sans Local', sans-serif;
 $font-size-xnano: 0.45em;
 $font-size-nano: 0.55em;
@@ -46,7 +44,6 @@ $padding-right: 14vw;
 ===========================================================*/
 
 
-
 body {
   font-family: 'Alegreya Sans Local', sans-serif;
 }
@@ -62,7 +59,6 @@ body {
 *::after {
   box-sizing: border-box;
 }
-//Estilo de la web global
 html,
 body {
   width: 100%;
