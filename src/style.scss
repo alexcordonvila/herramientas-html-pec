@@ -14,7 +14,7 @@
   font-display: swap;
 }
 $rojo-bilbao: rgb(176, 18, 18);
-$color-verde-euskadi: rgba(0, 155, 72);
+$color-verde-euskadi: rgb(0, 155, 72);
 $blanco: #ffffff;
 $color-beige: rgb(241, 241, 203);
 $color-blanco-fondo: #f0f2f5;
@@ -42,11 +42,6 @@ $padding-right: 14vw;
   Formato recomendado porque hace que los layouts sean más fáciles de controlar.
   Nota: Modificar la mínimo possible
 ===========================================================*/
-
-
-body {
-  font-family: 'Alegreya Sans Local', sans-serif;
-}
 
 
 * {
@@ -368,7 +363,7 @@ main {
 
     &:hover {
       background: $rojo-bilbao;
-      opacity: 60%;
+      opacity: 0.6;
     }
   }
 
@@ -583,10 +578,9 @@ main {
   h2 {
     margin-top: 1.5rem;
   }
-}
-.detalle-page figure iframe {
 
 }
+
 .detalle-image-container {
   margin: 2rem 0;
   display: block;
@@ -602,6 +596,27 @@ main {
     max-width: 100%;
     object-fit: cover;
   }
+}
+.video-container {
+    margin: 2.5rem auto;     
+    max-width: 800px;        
+    width: 100%;    
+    display: flex;     
+    flex-direction: column;  
+    align-items: center;  
+
+    lite-youtube {
+      border-radius: 8px;    
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+      width: 100%;
+      margin-bottom: 0.8rem; 
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;           
+    }
+  
 }
 /*_detalle*/
 
@@ -684,7 +699,7 @@ footer {
       text-align: center;
     }
   }
-  .link-list li {
+  .links-list li {
     font-size: $font-size-xsmall;
 
     a {
