@@ -1,17 +1,27 @@
-/*Font: La família de fuente para toda la web será Alegreya Sans*/
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: 'Alegreya Sans Local';
+  src: url('./fonts/alegreya-sans-v26-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
 
-//Variables de colores
+@font-face {
+  font-family: 'Alegreya Sans Local';
+  src: url('./fonts/alegreya-sans-v26-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 $rojo-bilbao: rgb(176, 18, 18);
-$color-verde-euskadi: rgba(0, 155, 72);
+$color-verde-euskadi: rgb(0, 155, 72);
 $blanco: #ffffff;
 $color-beige: rgb(241, 241, 203);
 $color-blanco-fondo: #f0f2f5;
 $negro-light: #1c1c1c;
 
 $transicion: 0.3s ease;
-// Variables de tipografía
-$font-main: "Alegreya Sans", sans-serif;
+$font-main: 'Alegreya Sans Local', sans-serif;
 $font-size-xnano: 0.45em;
 $font-size-nano: 0.55em;
 $font-size-micro: 0.625em;
@@ -32,6 +42,8 @@ $padding-right: 14vw;
   Formato recomendado porque hace que los layouts sean más fáciles de controlar.
   Nota: Modificar la mínimo possible
 ===========================================================*/
+
+
 * {
   margin: 0;
   padding: 0;
@@ -42,7 +54,6 @@ $padding-right: 14vw;
 *::after {
   box-sizing: border-box;
 }
-//Estilo de la web global
 html,
 body {
   width: 100%;
@@ -352,7 +363,7 @@ main {
 
     &:hover {
       background: $rojo-bilbao;
-      opacity: 60%;
+      opacity: 0.6;
     }
   }
 
@@ -368,6 +379,11 @@ main {
 /*_index.html*/
 
 /*categoria.html_*/
+ 
+#map {
+  height: 300px;
+  width: 100%;
+}
 .categoria-page,
 .detalle-page {
   padding: 4rem 2rem;
@@ -562,17 +578,9 @@ main {
   h2 {
     margin-top: 1.5rem;
   }
+
 }
-.detalle-page figure iframe {
-  margin: 1.5rem 0 0 0;
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+
 .detalle-image-container {
   margin: 2rem 0;
   display: block;
@@ -588,6 +596,27 @@ main {
     max-width: 100%;
     object-fit: cover;
   }
+}
+.video-container {
+    margin: 2.5rem auto;     
+    max-width: 800px;        
+    width: 100%;    
+    display: flex;     
+    flex-direction: column;  
+    align-items: center;  
+
+    lite-youtube {
+      border-radius: 8px;    
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+      width: 100%;
+      margin-bottom: 0.8rem; 
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;           
+    }
+  
 }
 /*_detalle*/
 
@@ -670,7 +699,7 @@ footer {
       text-align: center;
     }
   }
-  .link-list li {
+  .links-list li {
     font-size: $font-size-xsmall;
 
     a {

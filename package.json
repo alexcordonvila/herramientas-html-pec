@@ -11,8 +11,8 @@
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel src/**/*.html",
-    "parcel:build": "parcel build src/*.html src/**/*.html --public-url /",
+    "parcel:dev": "parcel 'src/**/*.html' --open",
+    "parcel:build": "parcel build 'src/**/*.html' --public-url /",
     "clean": "rimraf dist .parcel-cache"
   },
   "devDependencies": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "leaflet": "^1.9.4"
+    "leaflet": "^1.9.4",
+    "lite-youtube-embed": "^0.3.4"
   }
 }

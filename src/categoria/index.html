@@ -5,14 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Categoría - Bilbaofoodies</title>
-  <link rel="icon" href="../img/cutlery.png" type="image/png">
+  <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link rel="preload" href="../fonts/alegreya-sans-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/alegreya-sans-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/src/style.scss">
-  <style>
-    #map {
-      height: 300px;
-      width: 100%;
-    }
-  </style>
+  <script type="module" src="/src/app.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +29,7 @@
             ../img/bar-globo.png?as=webp&width=800 800w, 
             ../img/bar-globo.png?as=webp&width=1200 1200w"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" alt="Fachada del Bar El Globo"
-              loading="lazy">
+              loading="eager" fetchpriority=high>
           </figure>
           <div class="card-content">
             <a href="https://www.barelglobo.es/" target="_blank" rel="noopener"
@@ -50,7 +47,11 @@
 
         <article class="card" id="main-content">
           <figure class="image-container">
-            <img src="../img/bar-la-olla.jpg" alt="Fachada del Bar La Olla en la Plaza Nueva">
+            <img src="../img/bar-la-olla.jpg?as=webp&width=800" srcset="../img/bar-la-olla.jpg?as=webp&width=400 400w, 
+            ../img/bar-la-olla.jpg?as=webp&width=800 800w, 
+            ../img/bar-la-olla.jpg?as=webp&width=1200 1200w"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" alt="Fachada del Bar La Olla en la Plaza Nueva"
+              loading="lazy">
           </figure>
           <div class="card-content">
             <a href="https://www.barlaolla.com/es/bienvenidos-al-bar-la-olla/" target="_blank" rel="noopener"
@@ -182,8 +183,6 @@
       </div>
     </section>
     <div id="map" role="application" aria-label="Mapa interactivo con la localización de los bares"></div>
-    <script type="module" src="/src/app.js"></script>
-
   </main>
   <include src="components/footer.html"></include>
 </body>
