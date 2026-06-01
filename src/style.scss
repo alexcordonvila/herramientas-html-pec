@@ -1,15 +1,10 @@
-@font-face {
-  font-family: 'Alegreya Sans Local';
-  src: url('./fonts/alegreya-sans-v26-latin-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
-}
 
 @font-face {
-  font-family: 'Alegreya Sans Local';
-  src: url('./fonts/alegreya-sans-v26-latin-700.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'Cabin';
+  src: url('./fonts/Cabin.woff2') format('woff2');
+  
+  /* Definimos el rango de pesos que soporta Cabin (de 400 a 700) */
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
@@ -21,7 +16,7 @@ $color-blanco-fondo: #f0f2f5;
 $negro-light: #1c1c1c;
 
 $transicion: 0.3s ease;
-$font-main: 'Alegreya Sans Local', sans-serif;
+$font-main: 'Cabin', sans-serif;
 $font-size-xnano: 0.45em;
 $font-size-nano: 0.55em;
 $font-size-micro: 0.625em;
